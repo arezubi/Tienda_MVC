@@ -8,16 +8,16 @@
 <?php Utils::deleteSession('register'); ?>
 <form action="<?=base_url?>usuario/save" method="POST">
     <label for= "nombre">Nombre</label>
-    <input type="text" name="nombre" required/>
+    <input type="text" name="nombre" required autocomplete="off"/>
 
     <label for= "apellidos">Apellidos</label>
-    <input type="text" name="apellidos" required/>
+    <input type="text" name="apellidos" required autocomplete="off"/>
 
     <label for= "email">Email</label>
-    <input type="email" name="email" required/>
+    <input type="email" name="email" required autocomplete="off"/>
 
     <label for= "password">Contraseña</label>
-    <input type="password" name="password" required/>
+    <input type="password" name="password" required autocomplete="off"/>
 
     <input type="submit" value="Registrarse" />
 </form>
