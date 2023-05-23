@@ -46,4 +46,17 @@ class Categoria{
         }
         return $result;
     }
+
+    public function edit(){
+		$sql = "UPDATE categoria SET nombre='{$this->getNombre()}', categoria_id={$this->getCategoria_id()}";
+		$sql .= " WHERE id={$this->id};";
+
+		$save = $this->db->query($sql);
+		
+		$result = false;
+		if($save){
+			$result = true;
+		}
+		return $result;
+	}
 }

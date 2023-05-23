@@ -43,6 +43,20 @@ class categoriaController{
             $categoria->setNombre($_POST['nombre']);
             $categoria->save();
         }
-        header("Location:".base_url."categoria/index");
+        header("Location:".base_url."categoria/index.php");
+    }
+
+    public function editar(){
+        Utils::isAdmin();
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            $edit = true;
+            $categoria = new Categoria;
+            $categoria->setId($id);
+            $cat = $categoria->getOne();
+            require_once 'views/categoria/crear.php';
+        }else{
+            header("Location:".base_url.'categoria/index.php');
+        }
     }
 }
