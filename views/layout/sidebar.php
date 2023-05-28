@@ -1,5 +1,3 @@
-
-                
 <!-- BARRA LATERAL -->
 <aside id="lateral">
 
@@ -18,7 +16,7 @@
         <h3>Entrar a la web</h3>
         <form action="<?=base_url?>usuario/login" method="POST">
             <label for="email">Email</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" required autocomplete="off/>
             <label for="password">Contraseña</label>
             <input type="password" name="password" />
             <input type="submit" value="Enviar" />
